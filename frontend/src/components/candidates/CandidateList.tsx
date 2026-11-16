@@ -34,7 +34,7 @@ export function CandidateList({ candidates, onSelect }: CandidateListProps) {
               <div className="mt-2 flex flex-wrap gap-1">
                 {c.skills.length === 0 && <span className="text-[11px] text-slate-500">No skills detected</span>}
                 {c.skills.slice(0, MAX_VISIBLE_SKILLS).map((s) => (
-                  <span key={s} className="rounded-md bg-brand-500/10 px-1.5 py-0.5 text-[11px] text-brand-300">{s}</span>
+                  <span key={s} className="rounded-md bg-slate-100 px-1.5 py-0.5 text-[11px] font-medium text-slate-900 border border-slate-200">{s}</span>
                 ))}
                 {c.skills.length > MAX_VISIBLE_SKILLS && (
                   <span className="rounded-md bg-[#292D38]/[0.04] px-1.5 py-0.5 text-[11px] text-slate-400">
