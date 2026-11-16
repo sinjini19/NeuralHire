@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=JetBrains+Mono:wght@500&display=swap');
+@import "tailwindcss";
+
+/* NeuralHire warm editorial design system */
+@theme {
+  --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  --font-display: 'Plus Jakarta Sans', 'Inter', ui-sans-serif, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+
+  /* Warm ivory surfaces */
+  --color-navy-950: #F8F3E9;
+  --color-navy-900: #F1EBDD;
+  --color-navy-850: #FFFDF8;
+  --color-navy-800: #EAE2D5;
+  --color-navy-700: #DCD1C2;
+  --color-navy-600: #CFC2B2;
+
+  /* Pastel periwinkle brand accent */
+  --color-brand-300: #D9E2F3;
+  --color-brand-400: #C7D5EC;
+  --color-brand-500: #B8C9E8;
+  --color-brand-600: #9FB6DF;
+  --color-brand-700: #829FCF;
+
+  /* Warm charcoal replacements for Tailwind slate utilities */
+  --color-slate-200: #41414A;
+  --color-slate-300: #55545C;
+  --color-slate-400: #706E75;
+  --color-slate-500: #85818A;
+  --color-slate-600: #625F67;
+  --color-slate-700: #49464F;
+  --color-slate-800: #35323A;
+  --color-slate-900: #292D38;
+
+  --animate-fade-up: fade-up 0.35s ease-out both;
+  --animate-fade-in: fade-in 0.25s ease-out both;
+
+  @keyframes fade-up {
+    from { opacity: 0; transform: translateY(5px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+}
+
+@layer base {
+  html, body, #root { min-height: 100%; }
+  body {
+    @apply bg-navy-950 font-sans text-slate-900 antialiased;
+    background: #F8F3E9;
+  }
+  h1, h2, h3, h4 { font-family: var(--font-display); letter-spacing: -0.025em; }
+  button, input, textarea, select { font: inherit; }
+  ::selection { background: #D8B8CF; color: #292D38; }
+  :focus-visible { outline: 2px solid #829FCF; outline-offset: 2px; }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+  }
+}
+
+@media print {
+  body { background: white !important; color: #111827 !important; }
+  aside, header, button, nav { display: none !important; }
+  #comparison-report { color: #111827 !important; }
+  #comparison-report article, #comparison-report section, #comparison-report table { break-inside: avoid; }
+}

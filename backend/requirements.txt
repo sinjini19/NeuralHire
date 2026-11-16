@@ -1,0 +1,11 @@
+# Runtime dependencies. Verified to have wheels for CPython 3.15 (see README).
+fastapi>=0.115
+uvicorn>=0.30
+python-multipart>=0.0.20
+python-dotenv>=1.0
+pydantic>=2.9
+sqlalchemy>=2.0,<3
+pymupdf==1.28.2
+
+# Optional AI provider integration (required for Gemini features)
+google-genai>=1.0.0
