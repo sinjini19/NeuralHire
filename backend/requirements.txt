@@ -9,3 +9,4 @@ pymupdf==1.28.2
 
 # Optional AI provider integration (required for Gemini features)
 google-genai>=1.0.0
+psycopg[binary]>=3.2
