@@ -9,12 +9,12 @@
   --font-mono: 'JetBrains Mono', ui-monospace, monospace;
 
   /* Warm ivory surfaces */
-  --color-navy-950: #F8F3E9;
-  --color-navy-900: #F1EBDD;
-  --color-navy-850: #FFFDF8;
-  --color-navy-800: #EAE2D5;
-  --color-navy-700: #DCD1C2;
-  --color-navy-600: #CFC2B2;
+  --color-navy-950: #E8F2FF;
+  --color-navy-900: #DCEAFB;
+  --color-navy-850: #F5F9FF;
+  --color-navy-800: #CDDEF5;
+  --color-navy-700: #B5CEEB;
+  --color-navy-600: #97B8DF;
 
   /* Pastel periwinkle backgrounds */
   --color-brand-300: #D9E2F3;
@@ -48,37 +48,14 @@
 }
 
 @layer base {
-  html, body, #root { min-height: 100%; }
+  html, body, #root {
+    min-height: 100%;
+    background-color: #E8F2FF;
+  }
 
   body {
-    @apply bg-navy-950 font-sans text-slate-900 antialiased;
-    background: #F8F3E9;
-  }
-
-  h1, h2, h3, h4 {
-    font-family: var(--font-display);
-    letter-spacing: -0.025em;
-  }
-
-  button, input, textarea, select {
-    font: inherit;
-  }
-
-  ::selection {
-    background: #D8B8CF;
-    color: #292D38;
-  }
-
-  :focus-visible {
-    outline: 2px solid #294766;
-    outline-offset: 2px;
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    *, *::before, *::after {
-      animation-duration: 0.01ms !important;
-      transition-duration: 0.01ms !important;
-    }
+    @apply font-sans text-slate-900 antialiased;
+    background-color: #E8F2FF !important;
   }
 }
 
